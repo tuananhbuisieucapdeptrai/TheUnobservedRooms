@@ -39,13 +39,11 @@ A first-person quantum-horror puzzle where observing uncertain passages consumes
 **Select your challenge**  
 Quantum game (Eligible for Global Quantum Game Jam)
 
-**Project description — 154 words**  
-The Unobserved Rooms is a 10–15 minute first-person quantum-horror puzzle set inside a shifting research facility. Passages begin in uncertain states: observing one makes it traversable, but the measurement consumes coherence. Players must choose which routes to stabilize, recover coherence shards, and avoid falling into darkness while a faceless entity called the Surveyor hunts them. Looking directly at the Surveyor slows it, creating tension between watching the threat and navigating the maze.
+**Project description — 642 characters**  
+The Unobserved Rooms is a first-person quantum-horror puzzle set in a shifting 14-room facility. Observing an uncertain passage makes it traversable but consumes coherence, forcing players to choose which routes become real. They recover stabilizer shards while a faceless Surveyor pursues them; looking directly at it slows its advance. To escape, players must visit spatially separated A and B controls and interleave operations until their correlated state matches a target. This turns quantum BRAIDing into both a physical path and an operation history. The result is a playable Unity game for WebGL and Windows with a Quantum Run Report.
 
-The central puzzle consists of spatially separated A and B controls with correlated states. Both stations must be visited and their operations interleaved into the target pattern before the exit becomes available. This interprets the Global Quantum Game Jam theme, quantum BRAIDing, as both a physical route through the facility and a history of linked operations. The project produced a playable Unity game for WebGL and Windows, procedural visual and audio assets, a reproducible run-data format, and an in-game Quantum Run Report.
-
-**Technical description — 90 words**  
-Built in Unity 6 with C#, the project uses a validated JSON run definition to construct a 14-room facility at runtime. It is designed around Moth Atlas `labyrinth-v1` for topology, `graph-v1` for the correlated A/B puzzle, and `comet-qrng-v1` for bounded lighting, reward, and anomaly variation. A deterministic cached payload keeps the jam build playable offline, while the result screen exposes engine provenance and the payload hash. The release includes automated validation, four Edit Mode tests, and tested WebGL and Windows build pipelines.
+**Technical description — 91 characters**  
+Unity 6/C# using Moth Atlas labyrinth-v1, graph-v1 and comet-qrng-v1 with cached JSON runs.
 
 **Which Moth Atlas engines did you use?**  
 Select the form options corresponding to:
