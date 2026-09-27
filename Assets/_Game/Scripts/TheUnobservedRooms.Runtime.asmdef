@@ -1,0 +1,20 @@
+{
+  "name": "TheUnobservedRooms.Runtime",
+  "rootNamespace": "UnobservedRooms",
+  "references": [
+    "Unity.InputSystem",
+    "Unity.AI.Navigation",
+    "Unity.Newtonsoft.Json",
+    "UnityEngine.UnityWebRequestModule",
+    "Unity.UGUI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "runId": "run_demo_001",
+  "source": "cached_verified",
+  "fallbackReason": null,
+  "createdAt": "2026-09-26T12:00:00Z",
+  "contentSeed": 184220,
+  "level": {
+    "startRoomId": "r0",
+    "exitRoomId": "r7",
+    "rooms": [
+      { "id": "r0", "archetype": "Anchor", "critical": true, "hazard": "None", "reward": "None", "variantSeed": 11 },
+      { "id": "r1", "archetype": "Corridor", "critical": true, "hazard": "None", "reward": "Shard", "variantSeed": 12 },
+      { "id": "r2", "archetype": "CalibrationLab", "critical": true, "hazard": "Flicker", "reward": "Switch", "variantSeed": 13 },
+      { "id": "r3", "archetype": "Office", "critical": false, "hazard": "None", "reward": "Lore", "variantSeed": 14 },
+      { "id": "r4", "archetype": "Junction", "critical": true, "hazard": "ColdSpot", "reward": "None", "variantSeed": 15 },
+      { "id": "r5", "archetype": "CalibrationLab", "critical": true, "hazard": "Static", "reward": "Switch", "variantSeed": 16 },
+      { "id": "r6", "archetype": "Utility", "critical": true, "hazard": "None", "reward": "Shard", "variantSeed": 17 },
+      { "id": "r7", "archetype": "Exit", "critical": true, "hazard": "None", "reward": "None", "variantSeed": 18 }
+      ,{ "id": "r8", "archetype": "Archive", "critical": false, "hazard": "Flicker", "reward": "Lore", "variantSeed": 29 }
+      ,{ "id": "r9", "archetype": "Office", "critical": false, "hazard": "Static", "reward": "None", "variantSeed": 31 }
+      ,{ "id": "r10", "archetype": "Utility", "critical": false, "hazard": "ColdSpot", "reward": "Shard", "variantSeed": 37 }
+      ,{ "id": "r11", "archetype": "Corridor", "critical": false, "hazard": "None", "reward": "None", "variantSeed": 41 }
+      ,{ "id": "r12", "archetype": "Archive", "critical": false, "hazard": "Flicker", "reward": "Lore", "variantSeed": 43 }
+      ,{ "id": "r13", "archetype": "Junction", "critical": false, "hazard": "Static", "reward": "None", "variantSeed": 47 }
+    ],
+    "edges": [
+      { "id": "e0", "fromRoomId": "r0", "toRoomId": "r1", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 0 },
+      { "id": "e1", "fromRoomId": "r1", "toRoomId": "r2", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 12 },
+      { "id": "e2", "fromRoomId": "r2", "toRoomId": "r4", "fromSocket": 1, "toSocket": 3, "initialStability": "uncertain", "observationCost": 12 },
+      { "id": "e3", "fromRoomId": "r4", "toRoomId": "r5", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 12 },
+      { "id": "e4", "fromRoomId": "r5", "toRoomId": "r6", "fromSocket": 1, "toSocket": 3, "initialStability": "uncertain", "observationCost": 12 },
+      { "id": "e5", "fromRoomId": "r6", "toRoomId": "r7", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 18 },
+      { "id": "e6", "fromRoomId": "r1", "toRoomId": "r3", "fromSocket": 1, "toSocket": 3, "initialStability": "uncertain", "observationCost": 12 },
+      { "id": "e7", "fromRoomId": "r3", "toRoomId": "r4", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 12 }
+      ,{ "id": "e8", "fromRoomId": "r1", "toRoomId": "r8", "fromSocket": 3, "toSocket": 1, "initialStability": "uncertain", "observationCost": 12 }
+      ,{ "id": "e9", "fromRoomId": "r8", "toRoomId": "r9", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 12 }
+      ,{ "id": "e10", "fromRoomId": "r9", "toRoomId": "r10", "fromSocket": 1, "toSocket": 3, "initialStability": "uncertain", "observationCost": 18 }
+      ,{ "id": "e11", "fromRoomId": "r4", "toRoomId": "r11", "fromSocket": 3, "toSocket": 1, "initialStability": "uncertain", "observationCost": 12 }
+      ,{ "id": "e12", "fromRoomId": "r5", "toRoomId": "r12", "fromSocket": 3, "toSocket": 1, "initialStability": "uncertain", "observationCost": 12 }
+      ,{ "id": "e13", "fromRoomId": "r12", "toRoomId": "r13", "fromSocket": 0, "toSocket": 2, "initialStability": "uncertain", "observationCost": 18 }
+    ]
+  },
+  "entanglement": {
+    "pairs": [
+      { "id": "p0", "switchRoomA": "r2", "switchRoomB": "r5", "initialA": 1, "initialB": 0, "correlation": "anti", "lockId": "exit_lock" }
+    ],
+    "targetPattern": [
+      { "pairId": "p0", "a": 0, "b": 1 }
+    ]
+  },
+  "events": {
+    "shardRooms": ["r1", "r6", "r10"],
+    "anomalyBias": [2, 0, 3, 1, 3, 2, 1, 0, 2, 3, 1, 2, 3, 0],
+    "lightingVariants": [1, 0, 2, 1, 3, 0, 1, 0, 2, 3, 1, 2, 3, 0]
+  },
+  "quantum": {
+    "engines": [
+      { "engineId": "labyrinth-v1", "jobIdShort": "demo-lab", "executionMode": "emulator", "generatedAt": "2026-09-26T12:00:00Z", "status": "complete", "statement": "Generated the room graph." },
+      { "engineId": "graph-v1", "jobIdShort": "demo-graph", "executionMode": "emulator", "generatedAt": "2026-09-26T12:00:00Z", "status": "complete", "statement": "Generated paired switch correlations." },
+      { "engineId": "comet-qrng-v1", "jobIdShort": "demo-rng", "executionMode": "emulator", "generatedAt": "2026-09-26T12:00:00Z", "status": "complete", "statement": "Generated bounded run event values." }
+    ],
+    "payloadHash": "8c5d19a4-demo"
+  }
+}
